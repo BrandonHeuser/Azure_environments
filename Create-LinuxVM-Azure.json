@@ -1,0 +1,62 @@
+{
+    "name": "linuxvm",
+    "id": "/subscriptions/676c2462-a918-4134-ba91-2a0bdafac83a/resourceGroups/linuxresourcegroup/providers/Microsoft.Compute/virtualMachines/linuxvm",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "eastus",
+    "properties": {
+        "vmId": "e9647088-3dcb-4c89-b601-94dd353cc3f8",
+        "hardwareProfile": {
+            "vmSize": "Standard_B1ms"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "RedHat",
+                "offer": "RHEL",
+                "sku": "8.2",
+                "version": "latest"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "linuxvm_OsDisk_1_d86a1fd5e52f4fb58d2839e882708ad2",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "id": "/subscriptions/676c2462-a918-4134-ba91-2a0bdafac83a/resourceGroups/linuxresourcegroup/providers/Microsoft.Compute/disks/linuxvm_OsDisk_1_d86a1fd5e52f4fb58d2839e882708ad2"
+                }
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "linuxvm",
+            "adminUsername": "azureuser",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": true,
+                "ssh": {
+                    "publicKeys": [
+                        {
+                            "path": "/home/azureuser/.ssh/authorized_keys",
+                            "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDW6LLvjcDPWzAhjESYRokU6QyA\r\nxxrmIhXIjdpzAgs3wkEXmF62ILjpGqzDGhGDgGF/wXEylx4WhXArx9kbPHjeJDWq\r\nHOE5QDNLhTr0WFU2RmHYlv4HQqDOfQ0vU5PkDAAqDceY7977xWC0yj42gogq/4VV\r\n+2GVNIQGP/fVToqQUfyvocok378oFRKQSiQRFdQXPbQERx9pqpCC3XP0D2lVxN81\r\nUy0Mqa0nGrJnsYF7osvDNfaewBPLbmPZUaG6P+PRMXzwpvWNq0rav1mlzq+JMeWa\r\nx4E0B2q6Cwa18F7E/0q807KGq74v86w/xI8MgU2MgOwyy7zpRM7W9Hr1+pXkjKjE\r\nqMg4d7yatf73lTBgN5noesL4c3sXDhIrbqQRjMlBpo3VQAXRsjJK4nCXbbtGI5LX\r\n+XacCFHIbPQ9NF1h84TmGoPytRLwT9iadgoOMgQaSJtblSOF1+HKUgGIkS5I2Qat\r\nNfg6QjJdBRC5/Y8qaVz8h3SISkw9ZN4CiWuu/kk= generated-by-azure\r\n"
+                        }
+                    ]
+                }
+            },
+            "secrets": []
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/676c2462-a918-4134-ba91-2a0bdafac83a/resourceGroups/linuxresourcegroup/providers/Microsoft.Network/networkInterfaces/linuxvm714"
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        },
+        "provisioningState": "Succeeded"
+    },
+    "zones": [
+        "1"
+    ]
+}
